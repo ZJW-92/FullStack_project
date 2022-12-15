@@ -10,4 +10,4 @@
 
 - run `npm init -y` to initialize empty package of json 
 - run the command `npm install body-parser cors express mongoose nodemon` to install dependencies for the server
-
+- connect with MongoDB with signing up `http://www.mongodb.com/cloud/atlas`
