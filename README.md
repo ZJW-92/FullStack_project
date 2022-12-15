@@ -4,6 +4,7 @@
 
 - make sure to install node then run `npx create-react-app ./` in the client directory
 - run the command `npm install axios moment react-file-base64 redux redux-thunk` to install dependencies for the client 
+- run the command `npm install -f @material-ui/core` to install UI styling
 - run `npm start` to start the client successfully
 
 ## Server
