@@ -21,3 +21,6 @@ This is a fullstack MERN application to take notes of memory.
 - run the command `npm install body-parser cors express mongoose nodemon` to install dependencies for the server
 - connect with MongoDB with signing up `http://www.mongodb.com/cloud/atlas`
 - run `npm start` to check if the server is running on port: 5000 successfully
+
+## Directory tree
+
