@@ -10,9 +10,24 @@ This is a fullstack MERN application to take notes of memory.
 ## Client 
 
 - make sure to install node then run `npx create-react-app ./` in the client directory
-- run the command `npm install axios moment react-file-base64 redux redux-thunk` to install dependencies for the client 
-- run the command `npm install -f @material-ui/core` to install UI styling
-- run the command `yarn add react-redux`to install react-redux 
+- install necessary dependencies for the client:  
+
+`npm install axios moment react-file-base64 redux redux-thunk`
+
+`npm install -f @material-ui/core`
+
+`yarn add react-redux`
+
+```
+axios: make api requests
+moment: a library work with time and date
+react-file-base64: convert images for uploading
+redux: a predictable state container for JavaScript apps.
+redux-thunk: asynchornous actions using redux 
+@material-ui/core: install UI styling
+react-redux: official React UI bindings layer for redux
+```
+
 - run `npm start` to start the client successfully
 
 ## Server
@@ -28,7 +43,8 @@ express: framework for creating the routers
 mongoose: create models for posts
 nodemon: automatically restart the node application 
 ```
-
+- After all dependencies are installed, import all dependencies in the index.js/server, add `"type": "module"` below the main in the package.json/server, delete "tests" and add `"start": "nodemon index.js"`in the scripts part in package.json/server
+ 
 - connect with MongoDB with signing up `http://www.mongodb.com/cloud/atlas`
 - run `npm start` to check if the server is running on port: 5000 successfully
 
