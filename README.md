@@ -43,7 +43,6 @@ const App = () => {return (
 export default App;  
 ```
 - run `npm start` to start the client to see "hello world" successfully
-
 ## Server setup
 
 - run `npm init -y` to initialize empty package of json in order to install necessary dependencies
@@ -59,8 +58,77 @@ nodemon: automatically restart the node application
 ```
 - After all dependencies are installed, import all dependencies in the index.js/server, add `"type": "module"` below the main in the package.json/server, delete "tests" and add `"start": "nodemon index.js"`in the scripts part in package.json/server
  
-- connect with MongoDB with signing up `http://www.mongodb.com/cloud/atlas`
-- run `npm start` to check if the server is running on port: 5000 successfully
+- To initialize the app, in index.js/server adding 
+```
+const app = express();
+app.use(bodyParser.json({limit:"30mb", extended: true})); 
+app.use(bodyParser.urlencoded({limit:"30mb", extended: true})); 
+app.use(cors()); 
+```
 
-## Directory tree
+#### Database setup
+
+- connect with MongoDB with signing up `http://www.mongodb.com/cloud/atlas` in index.js/server and add follows:
+```
+const CONNECTION_URL = 'here paste your connection string from mongodb'
+const PORT = process.env.PORT || 5000; 
+mongoose.connect(CONNECTION_URL, {useNewUrlParser : true, useUnifiedTopology : true})
+  .then(() => app.listen(PORT, () => console.log(`Server is running on port: ${PORT}`)))
+  .catch((error) => console.log(error.message)); 
+```
+- run `npm start` to check if the server is running on port: 5000 successfully in the console 
+
+##### Routes setup
+- create files and folders called: `posts.js/routes/server` and `posts.js/controllers/server`
+- add all the routes that work with posts in posts.js/routes and posts.js/controllers : 
+```
+import express from 'express';
+import { getPosts } from '../controllers/posts.js';
+const router = express.Router(); 
+router.get('/',getPosts );
+export default router; 
+```
+```
+export const getPosts= (req, res)=> {res.send('It works')}
+```
+- import router in the index.js adding `import postRoutes from './routes/posts.js'` and use express middleware `app.use('/posts', postRoutes)` to connect routes with app 
+- check if router works in the `localhost:5000/posts`
+
+- create file and folder called: `postMessage.js/models/server` to utilize mongoose
+```
+import mongoose from "mongoose";
+const postSchema = mongoose.Schema ({
+   title: String,
+   message: String,
+   creator: String,
+   tags: [String],
+   selectedFile: String,
+   likeCount: {
+     type: Number,
+     default: 0
+   }, 
+   createdAt:{
+      type: Date,
+      default: new Date()
+   },
+
+}); 
+const postMessage = mongoose.model('postMessage', postSchema);
+export default  postMessage; 
+``` 
+- add createPost in posts.js/routes and posts.js/controllers and import postMessage from models
+```
+import { getPosts,createPost } from '../controllers/posts.js';
+router.post('/', createPost );
+```
+```
+import postMessage from "../models/postMessage.js";
+export const createPost = (req, res) => {
+res.send('Post creation'); 
+}
+```
+
+
+
+
 
