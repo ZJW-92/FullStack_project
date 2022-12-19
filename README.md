@@ -27,6 +27,8 @@ redux-thunk: asynchornous actions using redux
 @material-ui/core: install UI styling
 react-redux: official React UI bindings layer for redux
 ```
+- import all dependencies in the index.js/src/client as follows: 
+
 
 - run `npm start` to start the client successfully
 
