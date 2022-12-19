@@ -17,8 +17,18 @@ This is a fullstack MERN application to take notes of memory.
 
 ## Server
 
-- run `npm init -y` to initialize empty package of json 
-- run the command `npm install body-parser cors express mongoose nodemon` to install dependencies for the server
+- run `npm init -y` to initialize empty package of json in order to install necessary dependencies
+- Dependencies are : 
+
+` npm install body-parser cors express mongoose nodemon`
+```
+body-parser: enable to send post requests
+cors: enable cross origin requests 
+express: framework for creating the routers
+mongoose: create models for posts
+nodemon: automatically restart the node application 
+```
+
 - connect with MongoDB with signing up `http://www.mongodb.com/cloud/atlas`
 - run `npm start` to check if the server is running on port: 5000 successfully
 
