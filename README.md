@@ -7,7 +7,7 @@ This is a fullstack MERN application to take notes of memory.
 ![NodeJS](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 
 
-## Client 
+## Client setup
 
 - make sure to install node then run `npx create-react-app ./` in the client directory
 - install necessary dependencies for the client:  
@@ -28,11 +28,23 @@ redux-thunk: asynchornous actions using redux
 react-redux: official React UI bindings layer for redux
 ```
 - import all dependencies in the index.js/src/client as follows: 
+``` 
+import React from  'react';
+import ReactDOM  from 'react-dom';
+import App from './App' ; 
+ReactDOM.render(<APP />, document.getElementById(('root'));  
+```
+- import dependencies in the App.js/src/client
+```
+import React from "react";
+const App = () => {return (
+<div> <h1>hello world</h1></div>
+)}
+export default App;  
+```
+- run `npm start` to start the client to see "hello world" successfully
 
-
-- run `npm start` to start the client successfully
-
-## Server
+## Server setup
 
 - run `npm init -y` to initialize empty package of json in order to install necessary dependencies
 - Dependencies are : 
