@@ -1,13 +1,23 @@
 # FullStack_MERN_ project
 This is a fullstack MERN application to take notes of memory.  
 
-## Teck stack 
+# Teck stack 
 ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) 
 ![NodeJS](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 
+## Part 1:  Skeleton for client, server, database and routes setup, 
 
-## Client setup
+- [Client](#client)
+- [Server](#server)
+- [Database](#database)
+- [Routes](#routes)
+
+## Part 2: Implement full stack app
+
+
+
+### Client
 
 - make sure to install node then run `npx create-react-app ./` in the client directory
 - install necessary dependencies for the client:  
@@ -43,7 +53,7 @@ const App = () => {return (
 export default App;  
 ```
 - run `npm start` to start the client to see "hello world" successfully
-## Server setup
+### Server
 
 - run `npm init -y` to initialize empty package of json in order to install necessary dependencies
 - Dependencies are : 
@@ -66,7 +76,7 @@ app.use(bodyParser.urlencoded({limit:"30mb", extended: true}));
 app.use(cors()); 
 ```
 
-#### Database setup
+### Database
 
 - connect with MongoDB with signing up `http://www.mongodb.com/cloud/atlas` in index.js/server and add follows:
 ```
@@ -78,7 +88,7 @@ mongoose.connect(CONNECTION_URL, {useNewUrlParser : true, useUnifiedTopology : t
 ```
 - run `npm start` to check if the server is running on port: 5000 successfully in the console 
 
-##### Routes setup
+### Routes
 - create files and folders called: `posts.js/routes/server` and `posts.js/controllers/server`
 - add all the routes that work with posts in posts.js/routes and posts.js/controllers : 
 ```
@@ -128,7 +138,27 @@ res.send('Post creation');
 }
 ```
 
-
+- add try catch block to getPosts and createPosts in posts.js/controllers to have access to real models 
+```
+export const getPosts = async(req, res) => {
+  try {
+    const postMessage = await postMessage.find();
+    res.status(200).json(postMessage);
+  } catch (error) {
+    res.status(404).json({message: error.message}); 
+  }
+  
+export const createPost = async (req, res) => {
+   const post = req.body; 
+   const newPost = new postMessage(post);
+   try{
+    await newPost.save(); 
+    res.status(201).json(newPost);  
+   } catch(error){
+    res.status(409).json({message: error.message}); 
+   }
+```
+- go back to client to implement logic for sending and creating posts 
 
 
 
