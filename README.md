@@ -13,7 +13,11 @@ This is a fullstack MERN application to take notes of memory.
 - [Database](#database)
 - [Routes](#routes)
 
-## Part 2: Implement full stack app
+## Part 2: Implement card for client, logic (post, edit, delete and count thunmb up button) for backend
+
+## Demo: 
+
+![demo](gif/demo.gif)
 
 
 
