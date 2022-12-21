@@ -1,4 +1,4 @@
-import React , {useEffect }from "react";
+import React , {useState, useEffect }from "react";
 import {Container, AppBar, Typography, Grow, Grid } from '@material-ui/core' ; 
 
 import Posts from './components/Posts/Posts'
@@ -10,17 +10,13 @@ import useStyles from './styles'
 
 
 const App = () => {
-
-   
-    
-    // here is blank error 
+    const [currentId, setCurrentId ] = useState(null);  
     const dispatch = useDispatch(); 
     const classes = useStyles(); 
 
-    useEffect (() => {
+    useEffect (( ) => {
         dispatch(getPosts()); 
     }, [dispatch])
-
 
     return (
          <Container maxWidth="lg">
@@ -32,17 +28,14 @@ const App = () => {
                <Grid container justify="space-between"  
                alignItems="stretch" spacing={3}>
                     <Grid item xs={12} sm={7}>
-                    
-                      <Posts></Posts>
+                      <Posts setCurrentId= {setCurrentId}></Posts>
                     </Grid>
                     <Grid item xs={12} sm={4}>
-              
-                      <Form></Form>
+                      <Form currentId= {currentId} setCurrentId={setCurrentId}></Form>
                       </Grid>
                </Grid>
                </Container></Grow>
          </Container>
-         
      ) 
 }
 
