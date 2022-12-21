@@ -19,8 +19,7 @@ This is a fullstack MERN application to take notes of memory.
 
 ![demo](gif/demo.gif)
 
-
-
+=======================================================================================================
 ### Client
 
 - make sure to install node then run `npx create-react-app ./` in the client directory
