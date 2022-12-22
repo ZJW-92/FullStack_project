@@ -14,16 +14,8 @@ This is a fullstack MERN application to take notes of memory.
 - [Routes](#routes)
 
 ## Part 2: Implement card for client, logic (post, edit, delete and count thunmb up button) for backend
-## Part 3: Deploy
-
-
-
-
-## Demo: 
-
-![demo](gif/demo.gif)
-
-=======================================================================================================
+## Part 3: [Deploy on netlify](https://memories-fullstackapp.netlify.app/)
+================================================================================================
 ### Client
 
 - make sure to install node then run `npx create-react-app ./` in the client directory
