@@ -1,5 +1,5 @@
 # FullStack_MERN_ project
-This is a fullstack MERN application to take notes of memory.  
+This is a fullstack MERN application to take memories with message and hashtag. Users can edit, delete the memories and count thumb up times.  
 
 # Teck stack 
 ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
