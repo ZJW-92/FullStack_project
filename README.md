@@ -1,5 +1,9 @@
 # FullStack_MERN_ project
-This is a fullstack MERN application to take memories with message and hashtag. Users can edit, delete the memories and count thumb up times.  
+This is a fullstack MERN application to take memories with message and hashtag. Users can edit, delete the memories and count thumb up times. 
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/eb3979f2-63a6-432b-bd5c-6ba7b1982d23/deploy-status)](https://app.netlify.com/sites/memories-fullstackapp/deploys)
+
+
 
 # Teck stack 
 ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
@@ -14,7 +18,9 @@ This is a fullstack MERN application to take memories with message and hashtag. 
 - [Routes](#routes)
 
 ## Part 2: Implement card for client, logic (post, edit, delete and count thunmb up button) for backend
-## Part 3: Demo 👉 [Deploy on netlify](https://memories-fullstackapp.netlify.app/)
+## Part 3: Demo 👉 [Full-stack MERN Project](https://memories-fullstackapp.netlify.app/)
+
+
 ================================================================================================
 ### Client
 
