@@ -1,8 +1,6 @@
-# FullStack_MERN_ project
+# Demo 👉 [Full-stack MERN Project](https://memories-fullstackapp.netlify.app/)
+
 This is a fullstack MERN application to take memories with message and hashtag. Users can edit, delete the memories and count thumb up times. 
-
-## Demo 👉 [Full-stack MERN Project](https://memories-fullstackapp.netlify.app/)
-
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/eb3979f2-63a6-432b-bd5c-6ba7b1982d23/deploy-status)](https://app.netlify.com/sites/memories-fullstackapp/deploys)
 
