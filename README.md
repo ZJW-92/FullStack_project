@@ -13,10 +13,10 @@ This is a fullstack MERN application to take memories with message and hashtag. 
 
 ## Part 1:  Skeleton for client, server, database and routes setup, 
 
-- [Client](#client)
-- [Server](#server)
-- [Database](#database)
-- [Routes](#routes)
+- ***[Client](#client)***
+- ***[Server](#server)***
+- ***[Database](#database)***
+- ***[Routes](#routes)***
 
 ## Part 2: Implement card for client, logic (post, edit, delete and count thunmb up button) for backend
 
