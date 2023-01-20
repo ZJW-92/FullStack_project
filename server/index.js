@@ -13,7 +13,11 @@ app.use(cors());
 app.use('/posts', postRoutes) ; 
 
 
+<<<<<<< HEAD
 const CONNECTION_URL = 'mongodb+srv://zhijie:wzj2018miracle@cluster0.bridd5e.mongodb.net/test?retryWrites=true&w=majority'
+=======
+const CONNECTION_URL = "mongodb+srv://zhijie:wzj2018miracle@cluster0.bridd5e.mongodb.net/test?retryWrites=true&w=majority"
+>>>>>>> 75281c3e9c38abd02c7341604b6aa2c22083b522
 const PORT = process.env.PORT || 5000; 
 mongoose.connect(CONNECTION_URL, {useNewUrlParser : true, useUnifiedTopology : true})
   .then(() => app.listen(PORT, () => console.log(`Server is running on port: ${PORT}`)))
